@@ -250,11 +250,11 @@ def run(event_ref: str, out_csv: str, token: Optional[str]) -> int:
             for m in iter_matches(session, tournament_id, div_id):
                 w.writerow({
                     "game_start_time": extract_time(m),
+                    "location":        extract_location(m),
+                    "court":           extract_court(m),
                     "division":        div_name,
                     "home_team":       extract_home(m),
                     "away_team":       extract_away(m),
-                    "location":        extract_location(m),
-                    "court":           extract_court(m),
                 })
                 rows_written += 1
             # be polite between divisions
