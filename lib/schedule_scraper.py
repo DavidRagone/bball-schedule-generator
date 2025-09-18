@@ -79,7 +79,9 @@ def get_json(session: requests.Session, url: str, params: Dict[str, str]) -> Opt
 
 # --- API wrappers -------------------------------------------------------------
 
-def get_divisions(session: requests.Session, tournament_id: int) -> List[Tuple[int, str]]:
+
+def get_divisions(
+        session: requests.Session, tournament_id: int) -> List[Tuple[int, str]]:
     """
     Returns list of (division_id, division_name)
     """
@@ -95,6 +97,7 @@ def get_divisions(session: requests.Session, tournament_id: int) -> List[Tuple[i
         if div_id is not None:
             out.append((int(div_id), div_name))
     return out
+
 
 def iter_matches(session: requests.Session, tournament_id: int, division_id: int) -> Generator[dict, None, None]:
     """
@@ -129,11 +132,13 @@ def iter_matches(session: requests.Session, tournament_id: int, division_id: int
 
 # --- Field extraction (defensive) --------------------------------------------
 
+
 def first_nonempty(*values) -> str:
     for v in values:
         if isinstance(v, str) and v.strip():
             return v.strip()
     return ""
+
 
 def get_nested(d: dict, *path, default: str = "") -> str:
     cur = d
@@ -145,6 +150,7 @@ def get_nested(d: dict, *path, default: str = "") -> str:
         return cur
     return default
 
+
 def extract_time(m: dict) -> str:
     # Common fields seen across BracketTeam payloads
     return first_nonempty(
@@ -152,27 +158,32 @@ def extract_time(m: dict) -> str:
         m.get("start_date_time"),
         m.get("start_time"),
         m.get("start_datetime"),
-        # Sometimes “start_time” is separate and needs the date; we keep it simple.
+        # Sometimes “start_time” is separate and needs the date
     )
+
 
 def extract_location(m: dict) -> str:
     return first_nonempty(
-        m.get("venue_name"),
-        m.get("facility_name"),
-        m.get("location"),
-        get_nested(m, "venue", "name", default=""),
-        get_nested(m, "facility", "name", default=""),
-        get_nested(m, "site", "name", default=""),
+            get_nested(m, "court", "venue", "name", default=""),
+            m.get("venue_name"),
+            m.get("facility_name"),
+            m.get("location"),
+            get_nested(m, "venue", "name", default=""),
+            get_nested(m, "facility", "name", default=""),
+            get_nested(m, "site", "name", default=""),
     )
+
 
 def extract_court(m: dict) -> str:
     return first_nonempty(
-        m.get("court_name"),
-        m.get("court"),
-        m.get("field"),
-        get_nested(m, "court", "name", default=""),
-        get_nested(m, "resource", "name", default=""),
-    )
+            get_nested(m, "court", "court_name", default=""),
+            m.get("court_name"),
+            m.get("court"),
+            m.get("field"),
+            get_nested(m, "court", "name", default=""),
+            get_nested(m, "resource", "name", default=""),
+            )
+
 
 def extract_team_name(obj: Optional[dict], fallback_keys: Iterable[str]) -> str:
     if isinstance(obj, dict):
@@ -186,6 +197,7 @@ def extract_team_name(obj: Optional[dict], fallback_keys: Iterable[str]) -> str:
             return v.strip()
     return ""
 
+
 def extract_home(m: dict) -> str:
     # Try nested home_team first; then some flat variants if present
     if isinstance(m.get("home_team"), dict):
@@ -197,6 +209,7 @@ def extract_home(m: dict) -> str:
         m.get("homeTeamName"),
         m.get("team_home_name"),
     )
+
 
 def extract_away(m: dict) -> str:
     if isinstance(m.get("away_team"), dict):
@@ -210,6 +223,7 @@ def extract_away(m: dict) -> str:
     )
 
 # --- Main --------------------------------------------------------------------
+
 
 def run(event_ref: str, out_csv: str, token: Optional[str]) -> int:
     tournament_id = parse_event_id(event_ref)

@@ -1,0 +1,262 @@
+game_start_time,location,court,division,home_team,away_team
+2025-09-20,OGP - Oakland,Court 3,2nd/3rd Grade D3,Bay Area Regulators 9u,Sportstrong 8u
+2025-09-20,OGP - Oakland,Court 3,2nd/3rd Grade D3,Lakeshow 8U Fuca,Sportstrong 8u
+2025-09-20,OGP - Oakland,Court 3,2nd/3rd Grade D3,Lakeshow 8U Fuca,1 on 1 8u
+2025-09-21,OGP - Oakland,Court 4,2nd/3rd Grade D3,1 on 1 8u,Bay Area Regulators 9u
+2025-09-21,OGP - Oakland,Court 4,2nd/3rd Grade D3,Lakeshow 8U Fuca,Bay Area Regulators 9u
+2025-09-21,OGP - Oakland,Court 4,2nd/3rd Grade D3,Sportstrong 8u,1 on 1 8u
+2025-09-20,Foothill Middle School,Ct. 1,9u/3rd Grade D2,WeCompete Nation Cubs 9u,4City 3rd/4th Purple
+2025-09-20,Foothill Middle School,Ct. 1,9u/3rd Grade D2,Lakeshow 9U Giusti,4City 3rd/4th Purple
+2025-09-20,Foothill Middle School,Ct. 1,9u/3rd Grade D2,NBBA 9u Black Marin (Larson),Lakeshow 9U Giusti
+2025-09-20,Foothill Middle School,Ct. 1,9u/3rd Grade D2,NorCal Elite 9u Red (Pangilinan),NBBA 9u Black Marin (Larson)
+2025-09-21,Foothill Middle School,Ct. 1,9u/3rd Grade D2,NorCal Elite 9u Red (Pangilinan),Lakeshow 9U Giusti
+2025-09-21,Foothill Middle School,Ct. 1,9u/3rd Grade D2,WeCompete Nation Cubs 9u,NBBA 9u Black Marin (Larson)
+2025-09-21,Foothill Middle School,Ct. 1,9u/3rd Grade D2,NorCal Elite 9u Red (Pangilinan),WeCompete Nation Cubs 9u
+2025-09-20,Foothill Middle School,Ct. 1,10u/4th Grade D1,EBC 10u (Corey),NorCal Elite 10u Red (Harrison)
+2025-09-20,Foothill Middle School,Ct. 1,10u/4th Grade D1,Lakeshow 10U Okotie,NorCal Elite 10u Red (Harrison)
+2025-09-20,Foothill Middle School,Ct. 1,10u/4th Grade D1,Lakeshow 10U Okotie,EBC 10u (Corey)
+2025-09-20,The Ultimate Fieldhouse,Court 1,10u/4th Grade D2,NBBA 10u Black Marin (Demaestri),1 on 1 10u
+2025-09-20,The Ultimate Fieldhouse,Court 1,10u/4th Grade D2,NBBA 10u Black Marin (Demaestri),Sportstrong 10u
+2025-09-20,The Ultimate Fieldhouse,Court 1,10u/4th Grade D2,Bay City EB 10u,Sportstrong 10u
+2025-09-21,OGP - Oakland,Court 4,10u/4th Grade D2,1 on 1 10u,Bay City EB 10u
+2025-09-21,OGP - Oakland,Court 4,10u/4th Grade D2,NBBA 10u Black Marin (Demaestri),Bay City EB 10u
+2025-09-21,OGP - Oakland,Court 4,10u/4th Grade D2,Sportstrong 10u,1 on 1 10u
+2025-09-20,Foothill Middle School,Ct. 2,10u/4th Grade D3,Team Blaze 10 Black,Bay City EB 10u Red
+2025-09-20,Foothill Middle School,Ct. 2,10u/4th Grade D3,Team Blaze 10 Black,Lakeshow 10U Fuca
+2025-09-20,Foothill Middle School,Ct. 1,10u/4th Grade D3,Bay City EB 10u Red,Lakeshow 10U Bryant
+2025-09-20,Foothill Middle School,Ct. 2,10u/4th Grade D3,NBBA 10u Gray Marin (Lloyd),Lakeshow 10U Fuca
+2025-09-21,Tice Valley Community Gym,Court 1,10u/4th Grade D3,Lakeshow 10U Fuca,Bay City EB 10u Red
+2025-09-21,Tice Valley Community Gym,Court 1,10u/4th Grade D3,NBBA 10u Gray Marin (Lloyd),Team Blaze 10 Black
+2025-09-21,Tice Valley Community Gym,Court 1,10u/4th Grade D3,Lakeshow 10U Bryant,Team Blaze 10 Black
+2025-09-21,Tice Valley Community Gym,Court 1,10u/4th Grade D3,NBBA 10u Gray Marin (Lloyd),Lakeshow 10U Bryant
+2025-09-20,The Ultimate Fieldhouse,Court 3,11u/5th Grade D1,NBBA 11u UA (R. Winter),Sportstrong Blue
+2025-09-20,The Ultimate Fieldhouse,Court 3,11u/5th Grade D1,NorCal Elite 11u Red (Ken),NBBA 11u UA (R. Winter)
+2025-09-20,The Ultimate Fieldhouse,Court 3,11u/5th Grade D1,NorCal Elite 11u Red (Ken),Sportstrong Blue
+2025-09-20,The Ultimate Fieldhouse,Court 3,11u/5th Grade D1,Bay City 11u Select,Lakeshow 11U Fuca
+2025-09-20,The Ultimate Fieldhouse,Court 3,11u/5th Grade D1,TM Griffins 11u,Lakeshow 11U Fuca
+2025-09-20,The Ultimate Fieldhouse,Court 3,11u/5th Grade D1,CDA 11U Elite 11U Select,Bay City 11u Select
+2025-09-20,The Ultimate Fieldhouse,Court 3,11u/5th Grade D1,TM Griffins 11u,CDA 11U Elite 11U Select
+2025-09-21,The Ultimate Fieldhouse,Court 4,11u/5th Grade D1,,
+2025-09-21,The Ultimate Fieldhouse,Court 1,11u/5th Grade D1,,
+2025-09-21,The Ultimate Fieldhouse,Court 2,11u/5th Grade D1,,
+2025-09-21,The Ultimate Fieldhouse,Court 2,11u/5th Grade D1,,
+2025-09-20,Tice Valley Community Gym,Court 2,11u/5th Grade D2,Team Blaze 11 Black,CDA Select 11u
+2025-09-20,Tice Valley Community Gym,Court 2,11u/5th Grade D2,WeCompete Nation Cubs 11u,Team Blaze 11 Black
+2025-09-20,Tice Valley Community Gym,Court 1,11u/5th Grade D2,4City 5th Purple,NorCal Elite 11u White (Allocco)
+2025-09-20,Tice Valley Community Gym,Court 1,11u/5th Grade D2,NorCal Elite 11u White (Allocco),Triple Threat 11U
+2025-09-20,Tice Valley Community Gym,Court 1,11u/5th Grade D2,SF Champions 5th Elite (Kareen),4City 5th Purple
+2025-09-20,Tice Valley Community Gym,Court 1,11u/5th Grade D2,SF Champions 5th Elite (Kareen),Triple Threat 11U
+2025-09-21,Tice Valley Community Gym,Court 2,11u/5th Grade D2,NBBA 11u Black Marin (Baker),WeCompete Nation Cubs 11u
+2025-09-21,Tice Valley Community Gym,Court 2,11u/5th Grade D2,NBBA 11u Black Marin (Baker),CDA Select 11u
+2025-09-21,Tice Valley Community Gym,Court 2,11u/5th Grade D2,,
+2025-09-21,Tice Valley Community Gym,Court 3,11u/5th Grade D2,,
+2025-09-21,Tice Valley Community Gym,Court 2,11u/5th Grade D2,,
+2025-09-21,Tice Valley Community Gym,Court 3,11u/5th Grade D2,,
+2025-09-20,Tice Valley Community Gym,Court 2,11u/5th Grade D3,707 Premier 5th (Dylan),Northern California Blue Chips
+2025-09-20,Tice Valley Community Gym,Court 1,11u/5th Grade D3,Northern California Blue Chips,Sportstrong White 13u Red
+2025-09-20,Tice Valley Community Gym,Court 3,11u/5th Grade D3,Lakeshow 11U Pickney,Bay City EB 11u
+2025-09-20,Tice Valley Community Gym,Court 1,11u/5th Grade D3,707 Premier 5th (Dylan),Bay City EB 11u
+2025-09-20,Tice Valley Community Gym,Court 1,11u/5th Grade D3,Lakeshow 11U Pickney,Sportstrong White 13u Red
+2025-09-20,The Ultimate Fieldhouse,Court 3,11u/5th Grade D3,Sportstrong Grey,707 Premier 5th/6th (Jared)
+2025-09-20,The Ultimate Fieldhouse,Court 4,11u/5th Grade D3,Lakeshow 11U Giusti,707 Premier 5th/6th (Jared)
+2025-09-21,The Ultimate Fieldhouse,Court 4,11u/5th Grade D3,NBBA 11u Gray Marin (Solis),Sportstrong Grey
+2025-09-21,The Ultimate Fieldhouse,Court 4,11u/5th Grade D3,NBBA 11u Gray Marin (Solis),Lakeshow 11U Giusti
+2025-09-21,The Ultimate Fieldhouse,Court 4,11u/5th Grade D3,,
+2025-09-21,The Ultimate Fieldhouse,Court 2,11u/5th Grade D3,,
+2025-09-21,The Ultimate Fieldhouse,Court 3,11u/5th Grade D3,,
+2025-09-20,The Ultimate Fieldhouse,Court 1,12u/6th Grade D1,NBBA 12u UA (B. Winter),Bay City 2032
+2025-09-20,The Ultimate Fieldhouse,Court 1,12u/6th Grade D1,NBBA 12u UA (B. Winter),Lakeshow 12U Tillman
+2025-09-20,The Ultimate Fieldhouse,Court 1,12u/6th Grade D1,Bay City 2032,Lakeshow 12U Tillman
+2025-09-20,The Ultimate Fieldhouse,Court 1,12u/6th Grade D1,Delta Heat 6th Elite,Bay Area Blue Devils
+2025-09-20,The Ultimate Fieldhouse,Court 1,12u/6th Grade D1,Delta Heat 6th Elite,NorCal Elite 12u Red (Allocco)
+2025-09-20,The Ultimate Fieldhouse,Court 1,12u/6th Grade D1,NorCal Elite 12u Red (Allocco),Bay Area Blue Devils
+2025-09-21,The Ultimate Fieldhouse,Court 3,12u/6th Grade D1,,
+2025-09-21,The Ultimate Fieldhouse,Court 1,12u/6th Grade D1,,
+2025-09-21,The Ultimate Fieldhouse,Court 3,12u/6th Grade D1,,
+2025-09-20,Foothill Middle School,Ct. 2,12u/6th Grade D2 Blue,NBBA 12u Black Marin (Glenn),NorCal Elite 12u Blue (French)
+2025-09-20,Foothill Middle School,Ct. 2,12u/6th Grade D2 Blue,NBBA 12u Black Marin (Glenn),Team Blaze 12 Black
+2025-09-20,Foothill Middle School,Ct. 2,12u/6th Grade D2 Blue,NorCal Elite 12u Blue (French),Team Blaze 12 Black
+2025-09-20,The Ultimate Fieldhouse,Court 4,12u/6th Grade D2 Blue,EBC 12u Elite (Corey),1 on 1 12u
+2025-09-20,The Ultimate Fieldhouse,Court 4,12u/6th Grade D2 Blue,Lakeshow 12U Fuca,1 on 1 12u
+2025-09-20,The Ultimate Fieldhouse,Court 4,12u/6th Grade D2 Blue,Lakeshow 12U Fuca,EBC 12u Elite (Corey)
+2025-09-21,Foothill Middle School,Ct. 2,12u/6th Grade D2 Blue,,
+2025-09-21,Foothill Middle School,Ct. 1,12u/6th Grade D2 Blue,,
+2025-09-21,Foothill Middle School,Ct. 2,12u/6th Grade D2 Blue,,
+2025-09-20,Tice Valley Community Gym,Court 1,12u/6th Grade D2 Orange,SF Champions 6th Elite (Vic),Bay City EB 12u
+2025-09-20,Tice Valley Community Gym,Court 1,12u/6th Grade D2 Orange,TM Warriors 12u,Bay City EB 12u
+2025-09-20,Tice Valley Community Gym,Court 1,12u/6th Grade D2 Orange,TM Warriors 12u,SF Champions 6th Elite (Vic)
+2025-09-20,The Ultimate Fieldhouse,Court 4,12u/6th Grade D2 Orange,F.O.A.,Lakeshow 12U Oyewole
+2025-09-21,Foothill Middle School,Ct. 1,12u/6th Grade D2 Orange,Lakeshow 12U Oyewole,NBBA 12u Gray Marin (Mosley)
+2025-09-21,Foothill Middle School,Ct. 1,12u/6th Grade D2 Orange,F.O.A.,NBBA 12u Gray Marin (Mosley)
+2025-09-21,Foothill Middle School,Ct. 1,12u/6th Grade D2 Orange,,
+2025-09-21,Foothill Middle School,Ct. 2,12u/6th Grade D2 Orange,,
+2025-09-21,Foothill Middle School,Ct. 1,12u/6th Grade D2 Orange,,
+2025-09-20,Tice Valley Community Gym,Court 1,12u/6th Grade D3 Blue,Lakeshow 12U Adams,AYB Ball Boyz
+2025-09-20,Tice Valley Community Gym,Court 1,12u/6th Grade D3 Blue,Lakeshow 12U Adams,NBBA 12u Silver Marin (Larson)
+2025-09-20,Tice Valley Community Gym,Court 3,12u/6th Grade D3 Blue,Hayward Panthers,Top Flight Elite (Eugene)
+2025-09-20,Tice Valley Community Gym,Court 3,12u/6th Grade D3 Blue,NorCal Elite 12u Gold (Pangilinan),Top Flight Elite (Eugene)
+2025-09-21,Foothill Middle School,Ct. 2,12u/6th Grade D3 Blue,AYB Ball Boyz,NBBA 12u Silver Marin (Larson)
+2025-09-21,Foothill Middle School,Ct. 2,12u/6th Grade D3 Blue,Hayward Panthers,NorCal Elite 12u Gold (Pangilinan)
+2025-09-21,Foothill Middle School,Ct. 2,12u/6th Grade D3 Blue,,
+2025-09-21,Foothill Middle School,Ct. 2,12u/6th Grade D3 Blue,,
+2025-09-21,Foothill Middle School,Ct. 2,12u/6th Grade D3 Blue,,
+2025-09-20,OGP - Oakland,Court 1,12u/6th Grade D3 Orange,Lakeshow 12U Washington,707 Premier 5th (Ali)
+2025-09-20,OGP - Oakland,Court 3,12u/6th Grade D3 Orange,Team Infinite,4City 6th Purple
+2025-09-20,OGP - Oakland,Court 1,12u/6th Grade D3 Orange,707 Premier 5th (Ali),Team Infinite
+2025-09-20,OGP - Oakland,Court 1,12u/6th Grade D3 Orange,Lakeshow 12U Washington,4City 6th Purple
+2025-09-21,Tice Valley Community Gym,Court 3,12u/6th Grade D3 Orange,Lakeshow 12U Washington,Team Infinite
+2025-09-20,The Ultimate Fieldhouse,Court 2,13u/7th Grade D1,NBBA 13u UA (K Winter),Bay City 2031
+2025-09-20,The Ultimate Fieldhouse,Court 2,13u/7th Grade D1,Delta Heat 7th Elite,NBBA 13u UA (K Winter)
+2025-09-20,The Ultimate Fieldhouse,Court 2,13u/7th Grade D1,Delta Heat 7th Elite,Bay City 2031
+2025-09-20,The Ultimate Fieldhouse,Court 1,13u/7th Grade D1,Lakeshow 13U Pickney,Irish Spring
+2025-09-20,The Ultimate Fieldhouse,Court 1,13u/7th Grade D1,Lakeshow 13U Pickney,Sportstrong Black
+2025-09-20,The Ultimate Fieldhouse,Court 1,13u/7th Grade D1,Irish Spring,Sportstrong Black
+2025-09-21,The Ultimate Fieldhouse,Court 1,13u/7th Grade D1,,
+2025-09-21,The Ultimate Fieldhouse,Court 2,13u/7th Grade D1,,
+2025-09-21,The Ultimate Fieldhouse,Court 3,13u/7th Grade D1,,
+2025-09-21,The Ultimate Fieldhouse,Court 1,13u/7th Grade D1,,
+2025-09-20,Tice Valley Community Gym,Court 3,13u/7th Grade D2 Blue,Lakeshow 13U Duckett,Sportstrong Blue
+2025-09-20,Tice Valley Community Gym,Court 3,13u/7th Grade D2 Blue,SF Champions 7th Circuit (Kareem),Lakeshow 13U Duckett
+2025-09-20,Tice Valley Community Gym,Court 2,13u/7th Grade D2 Blue,NBBA 13u Black (B. Winter),CPBC
+2025-09-20,Tice Valley Community Gym,Court 3,13u/7th Grade D2 Blue,SF Champions 7th Circuit (Kareem),Sportstrong Blue
+2025-09-20,Tice Valley Community Gym,Court 2,13u/7th Grade D2 Blue,Delta Heat 7th Black,NBBA 13u Black (B. Winter)
+2025-09-20,Tice Valley Community Gym,Court 2,13u/7th Grade D2 Blue,Delta Heat 7th Black,CPBC
+2025-09-21,Tice Valley Community Gym,Court 2,13u/7th Grade D2 Blue,,
+2025-09-21,Tice Valley Community Gym,Court 1,13u/7th Grade D2 Blue,,
+2025-09-21,Tice Valley Community Gym,Court 1,13u/7th Grade D2 Blue,,
+2025-09-20,Tice Valley Community Gym,Court 3,13u/7th Grade D2 Orange,Bay City EB 13u,Team Blueprint
+2025-09-20,Tice Valley Community Gym,Court 3,13u/7th Grade D2 Orange,Triple Threat 13U (Alex),Bay City EB 13u
+2025-09-20,Tice Valley Community Gym,Court 3,13u/7th Grade D2 Orange,Triple Threat 13U (Alex),Team Blueprint
+2025-09-20,Tice Valley Community Gym,Court 2,13u/7th Grade D2 Orange,NBBA 13u Gray Marin (Bauer),Lakeshow 13U Sun
+2025-09-20,Tice Valley Community Gym,Court 2,13u/7th Grade D2 Orange,Renegades 13u (Robles),NBBA 13u Gray Marin (Bauer)
+2025-09-20,Tice Valley Community Gym,Court 2,13u/7th Grade D2 Orange,Renegades 13u (Robles),Lakeshow 13U Sun
+2025-09-21,The Ultimate Fieldhouse,Court 4,13u/7th Grade D2 Orange,,
+2025-09-21,The Ultimate Fieldhouse,Court 4,13u/7th Grade D2 Orange,,
+2025-09-21,The Ultimate Fieldhouse,Court 4,13u/7th Grade D2 Orange,,
+2025-09-20,The Ultimate Fieldhouse,Court 1,13u/7th Grade D3 Blue,NorCal Elite 13u Gold (Jalen),4City 7th Purple
+2025-09-20,The Ultimate Fieldhouse,Court 2,13u/7th Grade D3 Blue,707 Premier 7th (Wes),LAB Prep 7th
+2025-09-20,The Ultimate Fieldhouse,Court 2,13u/7th Grade D3 Blue,NorCal Elite 13u Silver (Jalen),Durans All Stars
+2025-09-20,The Ultimate Fieldhouse,Court 2,13u/7th Grade D3 Blue,707 Premier 7th (Hunter),4City 7th Purple
+2025-09-20,The Ultimate Fieldhouse,Court 3,13u/7th Grade D3 Blue,NorCal Elite 13u Gold (Jalen),LAB Prep 7th
+2025-09-20,The Ultimate Fieldhouse,Court 3,13u/7th Grade D3 Blue,NorCal Elite 13u Silver (Jalen),707 Premier 7th (Wes)
+2025-09-20,The Ultimate Fieldhouse,Court 2,13u/7th Grade D3 Blue,707 Premier 7th (Hunter),Durans All Stars
+2025-09-20,Tice Valley Community Gym,Court 2,13u/7th Grade D3 Orange,WeCompete Nation Bears,Triple Threat 13U (Phelps)
+2025-09-20,Tice Valley Community Gym,Court 2,13u/7th Grade D3 Orange,WeCompete Nation Bears,SFBA 7th
+2025-09-20,Tice Valley Community Gym,Court 2,13u/7th Grade D3 Orange,SFBA 7th,Triple Threat 13U (Phelps)
+2025-09-20,The Ultimate Fieldhouse,Court 2,13u/7th Grade D3 Orange,SF Champions 7th Elite (Vic),Sportstrong Gold 14u Grey
+2025-09-20,The Ultimate Fieldhouse,Court 2,13u/7th Grade D3 Orange,SF Champions 7th Elite (Vic),NBBA 13u White Marin (Noles)
+2025-09-20,The Ultimate Fieldhouse,Court 2,13u/7th Grade D3 Orange,NBBA 13u White Marin (Noles),Sportstrong Gold 14u Grey
+2025-09-21,The Ultimate Fieldhouse,Court 2,13u/7th Grade D3 Orange,,
+2025-09-21,The Ultimate Fieldhouse,Court 3,13u/7th Grade D3 Orange,,
+2025-09-21,The Ultimate Fieldhouse,Court 1,13u/7th Grade D3 Orange,,
+2025-09-20,Foothill Middle School,Ct. 2,13u/7th Grade D3 Purple,AYB Leopards 13u,Sportstrong White
+2025-09-20,Foothill Middle School,Ct. 2,13u/7th Grade D3 Purple,Lakeshow 13U Harris,EMA Leaders 13u
+2025-09-20,Foothill Middle School,Ct. 2,13u/7th Grade D3 Purple,Sportstrong Red,NBBA 13u Silver Marin (Ratshin)
+2025-09-20,Foothill Middle School,Ct. 2,13u/7th Grade D3 Purple,Delta Heat 7th Red,Bay City EB 13u Red
+2025-09-21,Tice Valley Community Gym,Court 3,13u/7th Grade D3 Purple,,
+2025-09-21,Tice Valley Community Gym,Court 1,13u/7th Grade D3 Purple,,
+2025-09-21,Tice Valley Community Gym,Court 2,13u/7th Grade D3 Purple,,
+2025-09-21,Tice Valley Community Gym,Court 3,13u/7th Grade D3 Purple,,
+2025-09-21,Tice Valley Community Gym,Court 1,13u/7th Grade D3 Purple,,
+2025-09-21,Tice Valley Community Gym,Court 2,13u/7th Grade D3 Purple,,
+2025-09-21,Tice Valley Community Gym,Court 1,13u/7th Grade D3 Purple,,
+2025-09-21,Tice Valley Community Gym,Court 3,13u/7th Grade D3 Purple,,
+2025-09-20,OGP - Oakland,Court 3,14u/8th Grade D1,SF Champions 8th Circuit (Kareem),Vision 14u (Davis)
+2025-09-20,OGP - Oakland,Court 3,14u/8th Grade D1,NBBA 14u UA (Turner),Vision 14u (Davis)
+2025-09-20,OGP - Oakland,Court 3,14u/8th Grade D1,SF Champions 8th Circuit (Kareem),NBBA 14u UA (Turner)
+2025-09-20,OGP - Oakland,Court 2,14u/8th Grade D1,Lakeshow 14U Crawley,All In Elite NorCal 14u Elite
+2025-09-20,OGP - Oakland,Court 2,14u/8th Grade D1,4City 8th Purple,All In Elite NorCal 14u Elite
+2025-09-20,OGP - Oakland,Court 2,14u/8th Grade D1,Lakeshow 14U Crawley,4City 8th Purple
+2025-09-21,OGP - Oakland,Court 3,14u/8th Grade D1,,
+2025-09-21,OGP - Oakland,Court 4,14u/8th Grade D1,,
+2025-09-21,OGP - Oakland,Court 4,14u/8th Grade D1,,
+2025-09-20,OGP - Oakland,Court 4,14u/8th Grade D2,EMA Leaders,Sportstrong Blue
+2025-09-20,OGP - Oakland,Court 4,14u/8th Grade D2,Delta Heat 8th,EMA Leaders
+2025-09-20,OGP - Oakland,Court 4,14u/8th Grade D2,Delta Heat 8th,Sportstrong Blue
+2025-09-20,The Ultimate Fieldhouse,Court 4,14u/8th Grade D2,Lakeshow 14U Fuca,Team Infinite
+2025-09-20,The Ultimate Fieldhouse,Court 2,14u/8th Grade D2,WeCompete Nation Grizzlies,707 Premier 14u (Prescott)
+2025-09-20,The Ultimate Fieldhouse,Court 4,14u/8th Grade D2,Team Infinite,Team Blaze Black 14u
+2025-09-20,The Ultimate Fieldhouse,Court 2,14u/8th Grade D2,NBBA 14u Gray Marin (Glenn),WeCompete Nation Grizzlies
+2025-09-20,The Ultimate Fieldhouse,Court 4,14u/8th Grade D2,Lakeshow 14U Fuca,Team Blaze Black 14u
+2025-09-20,The Ultimate Fieldhouse,Court 2,14u/8th Grade D2,NBBA 14u Gray Marin (Glenn),707 Premier 14u (Prescott)
+2025-09-20,The Ultimate Fieldhouse,Court 3,14u/8th Grade D2,NBBA 14u Black (Lyons),Discover Elite
+2025-09-20,The Ultimate Fieldhouse,Court 3,14u/8th Grade D2,NBBA 14u Black (Lyons),NorCal Elite 14u White (Bruder)
+2025-09-20,The Ultimate Fieldhouse,Court 3,14u/8th Grade D2,NorCal Elite 14u White (Bruder),Discover Elite
+2025-09-21,OGP - Oakland,Court 2,14u/8th Grade D2,,
+2025-09-21,OGP - Oakland,Court 1,14u/8th Grade D2,,
+2025-09-21,OGP - Oakland,Court 2,14u/8th Grade D2,,
+2025-09-21,OGP - Oakland,Court 3,14u/8th Grade D2,,
+2025-09-21,OGP - Oakland,Court 1,14u/8th Grade D2,,
+2025-09-21,OGP - Oakland,Court 3,14u/8th Grade D2,,
+2025-09-20,Foothill Middle School,Ct. 1,14u/8th Grade D3 Blue,SF Champions 7th Elite (Uziah),TM Blazers 14u
+2025-09-20,Foothill Middle School,Ct. 1,14u/8th Grade D3 Blue,Lakeshow Boyd,TM Blazers 14u
+2025-09-20,Foothill Middle School,Ct. 2,14u/8th Grade D3 Blue,All In Elite NorCal 14u Black,707 Premier 8th (Prescott)
+2025-09-20,Foothill Middle School,Ct. 1,14u/8th Grade D3 Blue,NorCal Elite 14u Black (Jordan),SF Champions 7th Elite (Uziah)
+2025-09-20,Foothill Middle School,Ct. 2,14u/8th Grade D3 Blue,Hayward Panthers,Sportstrong Grey
+2025-09-20,Foothill Middle School,Ct. 1,14u/8th Grade D3 Blue,707 Premier 8th (Prescott),Sportstrong Grey
+2025-09-21,The Ultimate Fieldhouse,Court 3,14u/8th Grade D3 Blue,Lakeshow Boyd,NorCal Elite 14u Black (Jordan)
+2025-09-21,The Ultimate Fieldhouse,Court 2,14u/8th Grade D3 Blue,Hayward Panthers,All In Elite NorCal 14u Black
+2025-09-21,The Ultimate Fieldhouse,Court 1,14u/8th Grade D3 Blue,,
+2025-09-21,The Ultimate Fieldhouse,Court 2,14u/8th Grade D3 Blue,,
+2025-09-21,The Ultimate Fieldhouse,Court 3,14u/8th Grade D3 Blue,,
+2025-09-20,OGP - Oakland,Court 4,14u/8th Grade D3 Orange,WeCompete Nation Grizzlies,Triple Threat 14U
+2025-09-20,OGP - Oakland,Court 3,14u/8th Grade D3 Orange,Lakeshow 14U Blaisdell,WeCompete Nation Grizzlies
+2025-09-20,OGP - Oakland,Court 3,14u/8th Grade D3 Orange,Lakeshow 14U Blaisdell,Triple Threat 14U
+2025-09-21,OGP - Oakland,Court 3,14u/8th Grade D3 Orange,Lakeshow 14U Blaisdell,NBBA 14u Silver Marin (Mosley)
+2025-09-21,OGP - Oakland,Court 3,14u/8th Grade D3 Orange,NBBA 14u Silver Marin (Mosley),Triple Threat 14U
+2025-09-21,OGP - Oakland,Court 3,14u/8th Grade D3 Orange,NBBA 14u Silver Marin (Mosley),WeCompete Nation Grizzlies
+2025-09-20,OGP - Oakland,Court 4,Frosh D1,Majestic Hoops,Lakeshow 15U Blaisdell
+2025-09-20,OGP - Oakland,Court 4,Frosh D1,Lakeshow 15U Blaisdell,Southbay Snipers 15U
+2025-09-20,OGP - Oakland,Court 4,Frosh D1,Majestic Hoops,Southbay Snipers 15U
+2025-09-20,OGP - Oakland,Court 4,Frosh D1,Madera Kings,Wolfpack 15u
+2025-09-20,OGP - Oakland,Court 4,Frosh D1,Renegades 15u (De Leon),Wolfpack 15u
+2025-09-20,OGP - Oakland,Court 4,Frosh D1,Renegades 15u (De Leon),Madera Kings
+2025-09-21,OGP - Oakland,Court 3,Frosh D1,,
+2025-09-21,Tice Valley Community Gym,Court 2,Frosh D1,,
+2025-09-21,OGP - Oakland,Court 3,Frosh D1,,
+2025-09-20,Tice Valley Community Gym,Court 3,Frosh D3,Bay City EB 14/15u,Top Flight Elite
+2025-09-20,Tice Valley Community Gym,Court 3,Frosh D3,Southbay Snipers 15U Peter,Triple Threat 15U
+2025-09-20,Tice Valley Community Gym,Court 3,Frosh D3,Bay City EB 14/15u,Triple Threat 15U
+2025-09-21,Tice Valley Community Gym,Court 3,Frosh D3,Top Flight Elite,Southbay Snipers 15U Peter
+2025-09-21,Tice Valley Community Gym,Court 3,Frosh D3,Triple Threat 15U,Top Flight Elite
+2025-09-21,Tice Valley Community Gym,Court 3,Frosh D3,Bay City EB 14/15u,Southbay Snipers 15U Peter
+2025-09-20,OGP - Oakland,Court 2,JV D2,707 Premier JV (James),Sportstrong
+2025-09-20,OGP - Oakland,Court 2,JV D2,EBC JV Elite (Alfonso),Sportstrong
+2025-09-20,OGP - Oakland,Court 1,JV D2,707 Premier JV (Ali),Southbay Snipers 16U Kenny
+2025-09-20,OGP - Oakland,Court 2,JV D2,Wolfpack 16u,NBBA Marin 16u (Noles)
+2025-09-20,OGP - Oakland,Court 1,JV D2,EBC JV Elite (Alfonso),707 Premier JV (Ali)
+2025-09-20,OGP - Oakland,Court 2,JV D2,Lakeshow 16U Ned,707 Premier JV (James)
+2025-09-21,OGP - Oakland,Court 1,JV D2,Lakeshow 16U Ned,All In Elite NorCal JV Black
+2025-09-21,OGP - Oakland,Court 2,JV D2,NBBA Marin 16u (Noles),Sportstrong
+2025-09-21,OGP - Oakland,Court 1,JV D2,Lakeshow 16U Ned,Southbay Snipers 16U Kenny
+2025-09-21,OGP - Oakland,Court 2,JV D2,NBBA Marin 16u (Noles),East Bay Wildcats
+2025-09-21,OGP - Oakland,Court 1,JV D2,Wolfpack 16u,All In Elite NorCal JV Black
+2025-09-21,OGP - Oakland,Court 1,JV D2,Wolfpack 16u,East Bay Wildcats
+2025-09-21,OGP - Oakland,Court 2,JV D2,All In Elite NorCal JV Black,Southbay Snipers 16U Kenny
+2025-09-20,OGP - Oakland,Court 1,JV D3,EBC JV Select (Alfonso),Team Blaze 16 Black
+2025-09-20,OGP - Oakland,Court 2,JV D3,Bay Area Regulators,Durans All Stars
+2025-09-20,OGP - Oakland,Court 1,JV D3,EBC JV Select (Alfonso),Bay Area Regulators
+2025-09-20,OGP - Oakland,Court 1,JV D3,Durans All Stars,Team Blaze 16 Black
+2025-09-21,Tice Valley Community Gym,Court 2,JV D3,Team Blaze 16 Black,Bay Area Regulators
+2025-09-20,OGP - Oakland,Court 1,Varsity D1,707 Premier (Uffman),Wolfpack 17u
+2025-09-20,OGP - Oakland,Court 3,Varsity D1,East Bay Wildcats,All In Elite NorCal 17u
+2025-09-20,OGP - Oakland,Court 1,Varsity D1,NBBA Marin (DeMaestri),707 Premier (Battle)
+2025-09-20,OGP - Oakland,Court 1,Varsity D1,Wolfpack 17u,NBBA Marin (Clagett)
+2025-09-20,OGP - Oakland,Court 2,Varsity D1,707 Premier (Battle),CSA Spartans
+2025-09-20,OGP - Oakland,Court 2,Varsity D1,NBBA Marin (DeMaestri),Knight Basketball Academy
+2025-09-20,OGP - Oakland,Court 1,Varsity D1,707 Premier (Uffman),Humboldt Wild
+2025-09-20,OGP - Oakland,Court 1,Varsity D1,Point Forward,NBBA Marin (Clagett)
+2025-09-20,OGP - Oakland,Court 2,Varsity D1,East Bay Wildcats,CSA Spartans
+2025-09-21,OGP - Oakland,Court 2,Varsity D1,Humboldt Wild,Knight Basketball Academy
+2025-09-21,OGP - Oakland,Court 1,Varsity D1,Point Forward,Wolfpack 17u
+2025-09-21,OGP - Oakland,Court 1,Varsity D1,All In Elite NorCal 17u,CSA Spartans
+2025-09-21,OGP - Oakland,Court 2,Varsity D1,Point Forward,Humboldt Wild
+2025-09-21,OGP - Oakland,Court 1,Varsity D1,All In Elite NorCal 17u,Knight Basketball Academy
+2025-09-20,OGP - Oakland,Court 2,Varsity D2,Team Blaze 16 Premier,Alameda Vipers
+2025-09-20,OGP - Oakland,Court 2,Varsity D2,Team Blaze 16 Premier,Southbay Snipers 17U
+2025-09-20,OGP - Oakland,Court 3,Varsity D2,CSA Spartans,East Bay Wildcats
+2025-09-20,OGP - Oakland,Court 3,Varsity D2,East Bay Wildcats,WE x Swish
+2025-09-20,OGP - Oakland,Court 3,Varsity D2,CSA Spartans,WE x Swish
+2025-09-21,OGP - Oakland,Court 2,Varsity D2,Alameda Vipers,Southbay Snipers 17U
+2025-09-21,OGP - Oakland,Court 3,Varsity D2,,
+2025-09-21,OGP - Oakland,Court 2,Varsity D2,,
