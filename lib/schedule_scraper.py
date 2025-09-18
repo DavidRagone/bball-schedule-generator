@@ -154,8 +154,8 @@ def get_nested(d: dict, *path, default: str = "") -> str:
 def extract_time(m: dict) -> str:
     # Common fields seen across BracketTeam payloads
     return first_nonempty(
-        m.get("date"),
         m.get("start_date_time"),
+        m.get("date"),
         m.get("start_time"),
         m.get("start_datetime"),
         # Sometimes “start_time” is separate and needs the date
@@ -250,11 +250,11 @@ def run(event_ref: str, out_csv: str, token: Optional[str]) -> int:
             for m in iter_matches(session, tournament_id, div_id):
                 w.writerow({
                     "game_start_time": extract_time(m),
-                    "location":        extract_location(m),
-                    "court":           extract_court(m),
                     "division":        div_name,
                     "home_team":       extract_home(m),
                     "away_team":       extract_away(m),
+                    "location":        extract_location(m),
+                    "court":           extract_court(m),
                 })
                 rows_written += 1
             # be polite between divisions
