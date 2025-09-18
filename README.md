@@ -14,3 +14,5 @@ useful, location and time based schedule.
 ```sh
 python lib/schedule_scraper.py event_id -o data/YYYY_MM_DD_schedule.csv
 ```
+
+Then add the file to manifest.json
