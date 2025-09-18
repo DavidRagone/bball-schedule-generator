@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tournament Schedules</title>
+
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- PapaParse (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+
+  <style>
+    /* Sticky table header, mobile-friendly row height */
+    thead th { position: sticky; top: 0; background: white; z-index: 1; }
+    th button { width: 100%; text-align: left; }
+    .truncate-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+  <div class="max-w-7xl mx-auto p-4 sm:p-6">
+    <header class="mb-4 sm:mb-6">
+      <h1 class="text-2xl sm:text-3xl font-semibold">Tournament Schedules</h1>
+      <p class="text-sm text-gray-600 mt-1">Load a CSV, then filter and sort. Works fully client-side.</p>
+    </header>
+
+    <!-- Source controls -->
+    <section class="bg-white rounded-2xl shadow p-4 mb-4 sm:mb-6">
+      <div class="flex flex-col sm:flex-row gap-3 sm:items-end">
+        <div class="flex-1">
+          <label class="block text-sm font-medium text-gray-700 mb-1">CSV file</label>
+          <select id="fileSelect" class="w-full border rounded-lg px-3 py-2">
+            <option value="">— Select from manifest —</option>
+          </select>
+          <p id="fileHint" class="text-xs text-gray-500 mt-1">
+            Tip: add <code>?file=data/2025-09-20_fall_tip_off.csv</code> to preselect.
+          </p>
+        </div>
+
+        <div class="shrink-0">
+          <label class="block text-sm font-medium text-gray-700 mb-1">Or open a local CSV</label>
+          <input id="fileInput" type="file" accept=".csv,text/csv" class="block w-full text-sm text-gray-700" />
+        </div>
+
+        <div class="shrink-0">
+          <button id="reloadBtn" class="px-4 py-2 rounded-lg bg-gray-100 hover:bg-gray-200 text-sm border">Reload</button>
+        </div>
+      </div>
+      <p id="status" class="text-xs text-gray-500 mt-2"></p>
+    </section>
+
+    <!-- Filters -->
+    <section class="bg-white rounded-2xl shadow p-4 mb-4 sm:mb-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Division</label>
+          <select id="divisionFilter" class="w-full border rounded-lg px-3 py-2">
+            <option value="">All</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Location</label>
+          <select id="locationFilter" class="w-full border rounded-lg px-3 py-2">
+            <option value="">All</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Court</label>
+          <select id="courtFilter" class="w-full border rounded-lg px-3 py-2">
+            <option value="">All</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Team contains</label>
+          <input id="teamSearch" type="search" placeholder="e.g., Warriors"
+                 class="w-full border rounded-lg px-3 py-2" />
+        </div>
+        <div class="flex items-end gap-2">
+          <button id="clearFilters" class="px-4 py-2 rounded-lg bg-gray-100 hover:bg-gray-200 text-sm border">Clear</button>
+          <button id="downloadCsv" class="px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-sm">Download filtered CSV</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Table -->
+    <section class="bg-white rounded-2xl shadow overflow-hidden">
+      <div class="overflow-x-auto">
+        <table class="min-w-full text-sm">
+          <thead class="text-left border-b">
+            <tr>
+              <th class="px-3 py-2"><button data-col="game_start_time" class="font-medium">Start time</button></th>
+              <th class="px-3 py-2"><button data-col="location" class="font-medium">Location</button></th>
+              <th class="px-3 py-2"><button data-col="court" class="font-medium">Court</button></th>
+              <th class="px-3 py-2"><button data-col="division" class="font-medium">Division</button></th>
+              <th class="px-3 py-2"><button data-col="home_team" class="font-medium">Home</button></th>
+              <th class="px-3 py-2"><button data-col="away_team" class="font-medium">Away</button></th>
+            </tr>
+          </thead>
+          <tbody id="tbody" class="divide-y"></tbody>
+        </table>
+      </div>
+      <div id="emptyState" class="p-6 text-center text-gray-500 hidden">No rows match your filters.</div>
+    </section>
+  </div>
+
+  <script>
+    // --- Config --------------------------------------------------------------
+    const MANIFEST_URL = 'manifest.json'; // same-origin file listing your CSVs
+    const REQUIRED_COLS = ['game_start_time','location','court','division','home_team','away_team'];
+
+    // --- State ---------------------------------------------------------------
+    let rawRows = [];      // all parsed rows (objects)
+    let filtered = [];     // filtered/sorted rows
+    let sortState = { key: 'game_start_time', dir: 'asc' };
+
+    // --- Utilities -----------------------------------------------------------
+    const $ = sel => document.querySelector(sel);
+    const $$ = sel => Array.from(document.querySelectorAll(sel));
+    const byId = id => document.getElementById(id);
+
+    function setStatus(msg) { byId('status').textContent = msg || ''; }
+
+    function uniqueSorted(values) {
+      return Array.from(new Set(values.filter(Boolean))).sort((a, b) => a.localeCompare(b));
+    }
+
+    function csvSafe(val) {
+      const s = (val ?? '').toString();
+      return /[,"\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
+    }
+
+    function toCSV(rows) {
+      const header = REQUIRED_COLS.join(',');
+      const lines = rows.map(r => REQUIRED_COLS.map(k => csvSafe(r[k] ?? '')).join(','));
+      return [header, ...lines].join('\n');
+    }
+
+    function download(filename, text) {
+      const blob = new Blob([text], {type: 'text/csv;charset=utf-8'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    }
+
+    // Try to parse times into Date for smarter sorting; fallback to string compare
+    function parseDateMaybe(s) {
+      if (!s) return null;
+      const d = new Date(s);
+      return isNaN(d.getTime()) ? null : d;
+    }
+
+    // --- Rendering -----------------------------------------------------------
+    function renderFilters(rows) {
+      const divisions = uniqueSorted(rows.map(r => r.division));
+      const locations = uniqueSorted(rows.map(r => r.location));
+      const courts    = uniqueSorted(rows.map(r => r.court));
+
+      const fill = (sel, items) => {
+        const el = byId(sel);
+        const keep = el.value;
+        el.innerHTML = '<option value="">All</option>' +
+          items.map(v => `<option>${v}</option>`).join('');
+        // reapply selection if still present
+        if (keep && items.includes(keep)) el.value = keep;
+      };
+
+      fill('divisionFilter', divisions);
+      fill('locationFilter', locations);
+      fill('courtFilter', courts);
+    }
+
+    function renderTable(rows) {
+      const tbody = byId('tbody');
+      tbody.innerHTML = '';
+
+      if (!rows.length) {
+        byId('emptyState').classList.remove('hidden');
+        return;
+      }
+      byId('emptyState').classList.add('hidden');
+
+      const frag = document.createDocumentFragment();
+      for (const r of rows) {
+        const tr = document.createElement('tr');
+        tr.className = 'hover:bg-gray-50';
+        tr.innerHTML = `
+          <td class="px-3 py-2 whitespace-nowrap">${r.game_start_time || ''}</td>
+          <td class="px-3 py-2"><div class="truncate-2">${r.location || ''}</div></td>
+          <td class="px-3 py-2 whitespace-nowrap">${r.court || ''}</td>
+          <td class="px-3 py-2 whitespace-nowrap">${r.division || ''}</td>
+          <td class="px-3 py-2"><div class="truncate-2">${r.home_team || ''}</div></td>
+          <td class="px-3 py-2"><div class="truncate-2">${r.away_team || ''}</div></td>
+        `;
+        frag.appendChild(tr);
+      }
+      tbody.appendChild(frag);
+    }
+
+    function applyFiltersAndSort() {
+      const div = byId('divisionFilter').value.trim();
+      const loc = byId('locationFilter').value.trim();
+      const crt = byId('courtFilter').value.trim();
+      const q   = byId('teamSearch').value.trim().toLowerCase();
+
+      filtered = rawRows.filter(r => {
+        if (div && r.division !== div) return false;
+        if (loc && r.location !== loc) return false;
+        if (crt && r.court !== crt) return false;
+        if (q) {
+          const hay = `${r.home_team} ${r.away_team}`.toLowerCase();
+          if (!hay.includes(q)) return false;
+        }
+        return true;
+      });
+
+      const { key, dir } = sortState;
+      const mult = dir === 'asc' ? 1 : -1;
+      filtered.sort((a, b) => {
+        // custom: try date compare for start_time
+        if (key === 'game_start_time') {
+          const da = parseDateMaybe(a[key]);
+          const db = parseDateMaybe(b[key]);
+          if (da && db) return (da - db) * mult;
+          // fallback to string compare
+        }
+        return a[key].localeCompare(b[key]) * mult;
+      });
+
+      renderTable(filtered);
+    }
+
+    function setSort(key) {
+      if (sortState.key === key) {
+        sortState.dir = sortState.dir === 'asc' ? 'desc' : 'asc';
+      } else {
+        sortState = { key, dir: 'asc' };
+      }
+      // Update aria-sort (accessibility hint)
+      $$('thead th').forEach(th => th.removeAttribute('aria-sort'));
+      const th = document.querySelector(`thead th button[data-col="${key}"]`)?.parentElement;
+      if (th) th.setAttribute('aria-sort', sortState.dir === 'asc' ? 'ascending' : 'descending');
+      applyFiltersAndSort();
+    }
+
+    // --- Loading -------------------------------------------------------------
+    async function loadManifest() {
+      try {
+        const res = await fetch(MANIFEST_URL, { cache: 'no-store' });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const j = await res.json();
+        const files = j.files || [];
+        const sel = byId('fileSelect');
+        sel.innerHTML = '<option value="">— Select from manifest —</option>' +
+          files.map(f => `<option value="${f.path}">${f.label || f.path}</option>`).join('');
+      } catch (e) {
+        // no manifest is fine; you can still use "Open CSV"
+        console.warn('No manifest.json found or invalid. Using local upload only.', e);
+        byId('fileHint').textContent = 'No manifest found. Use “Open local CSV” instead.';
+      }
+    }
+
+    function validateColumns(row) {
+      // Ensure expected headers exist; otherwise, try to map close variants (optional).
+      return REQUIRED_COLS.every(k => Object.prototype.hasOwnProperty.call(row, k));
+    }
+
+    function normalizeRow(row) {
+      // Trim whitespace on all fields we care about
+      const obj = {};
+      for (const k of REQUIRED_COLS) {
+        obj[k] = (row[k] ?? '').toString().trim();
+      }
+      return obj;
+    }
+
+    function ingestRows(rows) {
+      rawRows = rows.map(normalizeRow);
+      renderFilters(rawRows);
+      applyFiltersAndSort();
+      setStatus(`Loaded ${rawRows.length} rows.`);
+    }
+
+    async function loadCsvUrl(url) {
+      setStatus('Loading CSV…');
+      return new Promise((resolve, reject) => {
+        Papa.parse(url, {
+          download: true,
+          header: true,
+          skipEmptyLines: true,
+          complete: results => {
+            const rows = results.data || [];
+            if (!rows.length) {
+              setStatus('CSV is empty.');
+              return resolve();
+            }
+            if (!validateColumns(rows[0])) {
+              setStatus('CSV missing required headers.');
+              return resolve();
+            }
+            ingestRows(rows);
+            resolve();
+          },
+          error: err => {
+            setStatus('Failed to load CSV.');
+            reject(err);
+          }
+        });
+      });
+    }
+
+    async function loadCsvFile(file) {
+      setStatus('Reading CSV…');
+      return new Promise((resolve, reject) => {
+        Papa.parse(file, {
+          header: true,
+          skipEmptyLines: true,
+          complete: results => {
+            const rows = results.data || [];
+            if (!rows.length) {
+              setStatus('CSV is empty.');
+              return resolve();
+            }
+            if (!validateColumns(rows[0])) {
+              setStatus('CSV missing required headers.');
+              return resolve();
+            }
+            ingestRows(rows);
+            resolve();
+          },
+          error: err => {
+            setStatus('Failed to read CSV.');
+            reject(err);
+          }
+        });
+      });
+    }
+
+    // --- Events --------------------------------------------------------------
+    document.addEventListener('DOMContentLoaded', async () => {
+      await loadManifest();
+
+      // Preselect via ?file=...
+      const params = new URLSearchParams(location.search);
+      const pre = params.get('file');
+      if (pre) {
+        const sel = byId('fileSelect');
+        // Add it if not listed in manifest
+        if (![...sel.options].some(o => o.value === pre)) {
+          sel.insertAdjacentHTML('beforeend', `<option value="${pre}">${pre}</option>`);
+        }
+        sel.value = pre;
+        loadCsvUrl(pre);
+      }
+
+      byId('fileSelect').addEventListener('change', e => {
+        const v = e.target.value;
+        if (v) loadCsvUrl(v);
+      });
+
+      byId('fileInput').addEventListener('change', e => {
+        const f = e.target.files?.[0];
+        if (f) loadCsvFile(f);
+      });
+
+      byId('reloadBtn').addEventListener('click', () => {
+        const v = byId('fileSelect').value;
+        if (v) loadCsvUrl(v);
+      });
+
+      // Filters
+      ['divisionFilter','locationFilter','courtFilter'].forEach(id => {
+        byId(id).addEventListener('change', applyFiltersAndSort);
+      });
+
+      // Debounced search
+      let t;
+      byId('teamSearch').addEventListener('input', () => {
+        clearTimeout(t);
+        t = setTimeout(applyFiltersAndSort, 150);
+      });
+
+      byId('clearFilters').addEventListener('click', () => {
+        byId('divisionFilter').value = '';
+        byId('locationFilter').value = '';
+        byId('courtFilter').value = '';
+        byId('teamSearch').value = '';
+        applyFiltersAndSort();
+      });
+
+      byId('downloadCsv').addEventListener('click', () => {
+        const current = byId('fileSelect').value || 'schedule.csv';
+        const name = current.split('/').pop()?.replace(/\.csv$/i, '') || 'schedule';
+        download(`${name}_filtered.csv`, toCSV(filtered));
+      });
+
+      // Sorting
+      $$('thead th button').forEach(btn => {
+        btn.addEventListener('click', () => setSort(btn.dataset.col));
+      });
+      setSort('game_start_time'); // default
+    });
+  </script>
+</body>
+</html>
